@@ -62,8 +62,7 @@ for (let i = 1; i < 10; i++) {
     const digitButton = document.createElement("button");
     digitButton.classList.add("digits");
     digitButton.textContent = i;
-    //digitButton.style.width = "max-content";
-    //digitButton.style.height = "max-content";
+    digitButton.style.width = "30%";
     digitDiv.appendChild(digitButton);
 }
 
@@ -71,12 +70,13 @@ for (let i = 1; i < 10; i++) {
 const zeroButton = document.createElement("button");
 zeroButton.textContent = 0;
 digitDiv.appendChild(zeroButton);
-zeroButton.style.paddingLeft = "25%";
-zeroButton.style.paddingRight = "25%";
+zeroButton.style.width = "60%";
+
 
 // Comma button
 const comma = document.createElement("button");
 comma.textContent = ".";
+comma.style.width = "31%";
 digitDiv.appendChild(comma);
 
 
@@ -85,7 +85,9 @@ for (let i = 0; i < operators.length; i++) {
     const operatorButton = document.createElement("button");
     operatorButton.classList.add("operators");
     operatorButton.textContent = operators[i];
-    //operatorButton.style.width = "max-content";
+    operatorButton.style.padding = "10px"
+    operatorButton.style.width = "100%";
+    operatorButton.style.height = "50%";
     operatorsDiv.appendChild(operatorButton);
 }
 
@@ -100,6 +102,12 @@ displayDiv.style.flexDirection = "column";
 buttons.style.display = "flex";
 digitDiv.style.justifyContent = "center";
 digitDiv.style.gap = "2px";
+digitDiv.style.marginBottom = "2px";
+operatorsDiv.style.marginBottom = "2px";
+operatorsDiv.style.gap = "2px";
+display.style.marginBottom = "2px";
+display.style.height = "50px";
+
 
 
 

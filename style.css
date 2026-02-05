@@ -1,12 +1,23 @@
 body {
     height: 100%;
     width: 100%;
+    background-color: #EBF4F6;;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     border: black, 2px, solid;
-    width: 100px;
+    width: 200px;
+    height: auto;
+    border-radius: 4px;
     
 }
