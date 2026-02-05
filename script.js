@@ -1,6 +1,5 @@
 let operand1 = 0;
 let operator;
-let operand2 = 0;
 let justCalculated = false;
 
 function add(a, b) {
@@ -112,6 +111,11 @@ buttons.appendChild(operatorsDiv);
 container.appendChild(buttons);
 
 // Event listeners
+
+// whenever the user clicked on a digit Just calculated is set to true 
+// so the result of the previous calculation will be cleared 
+// from the screen
+
 digitDiv.addEventListener("click", function(e) {
     if (justCalculated == true) {
         display.textContent = "";
@@ -136,7 +140,9 @@ operatorsDiv.addEventListener("click", function(e) {
             let result = operate(parseInt(operation[0]), operation[1], parseInt(operation[2]));
             display.textContent = result; 
         }
-        
+    // checking if the user try to use multiple operations at the same time
+    // if so, the first operation will get calculated and the result will be displayed so
+    // the user can do further operations on it result.
     }else if (display.textContent.split(" ").length > 3) {
         let operation = display.textContent.split(" ").slice(0,3);
         if (operation[0].includes(".")) {
